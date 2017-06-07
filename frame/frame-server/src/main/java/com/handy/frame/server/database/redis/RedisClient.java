@@ -25,6 +25,7 @@ public class RedisClient implements InitializingBean,DisposableBean {
 
     private IRedisHandler redisHandler;
     private JedisPoolConfig jedisPoolConfig;
+    private String configName = DEFUALT_CONFIG;
     private String model;
     private String host;
     private String masterName;
@@ -143,6 +144,14 @@ public class RedisClient implements InitializingBean,DisposableBean {
 
     public void setJedisPoolConfig(JedisPoolConfig jedisPoolConfig) {
         this.jedisPoolConfig = jedisPoolConfig;
+    }
+
+    public String getConfigName() {
+        return configName;
+    }
+
+    public void setConfigName(String configName) {
+        this.configName = configName;
     }
 
     public String getModel() {
