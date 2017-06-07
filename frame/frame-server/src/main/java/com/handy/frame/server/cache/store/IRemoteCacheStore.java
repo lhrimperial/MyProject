@@ -17,19 +17,19 @@ public interface IRemoteCacheStore<K, V> {
      * 
      * @param key
      * @param value
-     * @return boolean 是否执行成功
+     * @return String 是否执行成功
      */
     
-    boolean set(K key, V value);
+    String set(K key, V value);
     
     /**
      * 主动向Cache更新指定的数据,指定过期时间
      * @param key
      * @param value
      * @param exp
-     * @return boolean 是否执行成功
+     * @return String 是否执行成功
      */
-    boolean set(K key, V value, int exp);
+    String set(K key, V value, int exp);
     
     /**
      * 获取缓存

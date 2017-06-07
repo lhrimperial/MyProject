@@ -1,14 +1,13 @@
 package com.handy.frame.server.cache.exception;
 
 
-import com.handy.frame.shared.exception.GeneralException;
 
 /**
  * @author longhairen
  * @create 2017-05-21 14:35
  * @description  key存在，value为null
  **/
-public class ValueIsNullException extends GeneralException {
+public class ValueIsNullException extends RedisCacheStorageException {
 
     private static final long serialVersionUID = 932825584009506614L;
 
