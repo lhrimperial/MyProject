@@ -6,21 +6,18 @@ import com.handy.frame.server.database.redis.RedisClient;
 import com.handy.frame.util.FastJsonUtil;
 import com.handy.frame.util.ReflectionUtils;
 import com.handy.frame.util.StringUtils;
-import com.handy.frame.util.ValidateUtils;
+import org.apache.log4j.Logger;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.lang.annotation.Annotation;
-import java.lang.annotation.ElementType;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.Map;
-import java.util.logging.Logger;
 
 /**
  * @author： longhairen
@@ -36,9 +33,33 @@ public class RedisCacheableAspect {
     private RedisClient redisClient;
 
     @Around("@annotation(redisCache)")
-    public Object cached(final ProceedingJoinPoint pjp, RedisCacheable redisCache) throws Throwable {
+    public Object cached(final ProceedingJoinPoint pjd, RedisCacheable redisCache) throws Throwable {
+        String redisKey = getCacheKey(pjd, redisCache);
+        switch (redisCache.option()) {
+            case SEL:
+                return sel(redisKey, pjd, redisCache);
+            case ADD:
+                return del(redisKey, pjd);
+            case UP:
+                return del(redisKey, pjd);
+            case DEL:
+                return del(redisKey, pjd);
+            default:
+                break;
+        }
+        return null;
+    }
+
+    /**
+     * 查询
+     * @param key
+     * @param pjp
+     * @param redisCache
+     * @return
+     * @throws Throwable
+     */
+    private Object sel(String key, ProceedingJoinPoint pjp, RedisCacheable redisCache) throws Throwable {
         try {
-            String key = getCacheKey(pjp, redisCache);
             String returnType = getReturnType(pjp);
             Object value = redisClient.get(key);    //从缓存获取数据
             if (value != null) {
@@ -64,9 +85,21 @@ public class RedisCacheableAspect {
             }
             return value;
         } catch (Exception e) {
-            logger.info("Redis缓存存取异常：" + e.getMessage());
+            logger.error("RedisCacheableAspect Redis缓存存取异常：" + e.getMessage());
             return pjp.proceed();
         }
+    }
+
+    private Object del(String redisKey, ProceedingJoinPoint pjd) {
+        logger.info("delete redisKey=" + redisKey);
+        redisClient.del(redisKey);
+        Object result = null;
+        try {
+            result = pjd.proceed();
+        } catch (Throwable e) {
+            logger.error("RedisCacheableAspect pjd.proceed error", e);
+        }
+        return result;
     }
 
     /**

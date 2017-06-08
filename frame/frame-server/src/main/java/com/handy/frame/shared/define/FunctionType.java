@@ -4,7 +4,7 @@ package com.handy.frame.shared.define;
 /**
 * @ClassName: FunctionType
 * @Description: TODO
-* @author HOAU-271755
+* @author longhairen
 * @date 2015年4月21日 下午5:33:44
 *
 */
