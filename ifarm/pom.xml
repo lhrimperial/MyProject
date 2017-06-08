@@ -7,18 +7,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.handy.ifarm</groupId>
+    <groupId>com.ifarm</groupId>
     <artifactId>ifarm</artifactId>
     <packaging>pom</packaging>
 
-    <distributionManagement>
-        <site>
-            <id>website</id>
-            <url>scp://webhost.company.com/www/website</url>
-        </site>
-    </distributionManagement>
-
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <modules>
+        <module>super</module>
+        <module>weixin</module>
+    </modules>
 </project>

@@ -1,0 +1,29 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>weixin-wechat</artifactId>
+        <groupId>com.ifarm.weixin</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ifarm.wechat</groupId>
+    <artifactId>wechat-news</artifactId>
+    <packaging>jar</packaging>
+
+    <name>wechat-news</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <wehcat-base-version>1.0-SNAPSHOT</wehcat-base-version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.ifarm.wechat</groupId>
+            <artifactId>wechat-base</artifactId>
+            <version>${wehcat-base-version}</version>
+        </dependency>
+    </dependencies>
+</project>
