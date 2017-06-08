@@ -11,7 +11,6 @@ import org.springframework.stereotype.Component;
  * @description：只读数据源连接切面
  */
 @Aspect
-@Component
 public class ReadOnlyConnectionAspect {
 	
 	@Around("@annotation(readOnlyConnection)")

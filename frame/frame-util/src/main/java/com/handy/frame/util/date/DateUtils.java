@@ -222,7 +222,7 @@ public class DateUtils extends org.apache.commons.lang.time.DateUtils {
 	/**
 	 * 返回该日期的最后一刻，精确到纳秒
 	 * 
-	 * @param date
+	 * @param endTime
 	 * @return
 	 */
 	public static Timestamp getLastEndDatetime(Date endTime) {
@@ -234,7 +234,7 @@ public class DateUtils extends org.apache.commons.lang.time.DateUtils {
 	/**
 	 * 返回该日期加1秒
 	 * 
-	 * @param date
+	 * @param endTime
 	 * @return
 	 */
 	public static Timestamp getEndTimeAdd(Date endTime) {

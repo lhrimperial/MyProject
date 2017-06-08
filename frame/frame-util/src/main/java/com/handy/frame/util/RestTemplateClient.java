@@ -16,7 +16,7 @@ import javax.annotation.Resource;
  * @date 2015年12月4日下午10:49:22
  * @Description: http调用工具类
  */
-@Component
+//@Component
 public class RestTemplateClient implements InitializingBean{
 	/**
 	 * Rest 调用

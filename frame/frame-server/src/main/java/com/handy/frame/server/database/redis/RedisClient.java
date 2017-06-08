@@ -7,6 +7,7 @@ import org.springframework.beans.factory.InitializingBean;
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.JedisPoolConfig;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Properties;
@@ -23,6 +24,8 @@ public class RedisClient implements InitializingBean,DisposableBean {
 
     public static String DEFUALT_CONFIG = "redis.properties";
 
+    private int expire = 3600 * 24;
+
     private IRedisHandler redisHandler;
     private JedisPoolConfig jedisPoolConfig;
     private String configName = DEFUALT_CONFIG;
@@ -34,7 +37,7 @@ public class RedisClient implements InitializingBean,DisposableBean {
 
 
     public String set(String key, String value){
-        return redisHandler.set(key, value);
+        return redisHandler.setex(key, expire, value);
     }
 
     public String set(String key, String value, int exp){
@@ -111,7 +114,7 @@ public class RedisClient implements InitializingBean,DisposableBean {
 
     private void loadConfig(){
         try {
-            Properties properties = ConfigFileLoadUtil.getPropertiesForClasspath(DEFUALT_CONFIG);
+            Properties properties = ConfigFileLoadUtil.getPropertiesForClasspath(configName);
             if (jedisPoolConfig == null) {
                 jedisPoolConfig = new JedisPoolConfig();
             }
@@ -128,6 +131,8 @@ public class RedisClient implements InitializingBean,DisposableBean {
             password = properties.getProperty("redis.password");
             masterName = properties.getProperty("masterName");
             timeout = Integer.parseInt(properties.getProperty("redis.timeout"));
+        } catch (FileNotFoundException ee) {
+            ee.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

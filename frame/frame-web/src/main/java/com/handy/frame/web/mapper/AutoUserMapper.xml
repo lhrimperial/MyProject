@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.handy.frame.web.mapper.AutoUserMapper">
+
+    <insert id="saveAutoUser"  useGeneratedKeys="true" keyProperty="id" parameterType="com.handy.frame.web.domain.AutoUser">
+      INSERT  INTO auto_user(user_name,pass_word) values(#{userName},#{passWord})
+    </insert>
+
+
+    <select id="findAutoUser" parameterType="int" resultType="com.handy.frame.web.domain.AutoUser">
+        SELECT * FROM auto_user t WHERE t.id = #{id}
+    </select>
+</mapper>

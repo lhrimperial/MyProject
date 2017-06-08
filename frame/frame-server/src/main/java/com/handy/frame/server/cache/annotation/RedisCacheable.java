@@ -14,18 +14,23 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD})
 public @interface RedisCacheable {
     public enum KeyMode{
-        DEFAULT,    //只有加了@CacheKey的参数,才加入key后缀中
+        DEFAULT,    //默认 加上参数
+        ANNO,       //只有加了@RedisCacheKey的参数,才加入key后缀中
         BASIC,      //只有基本类型参数,才加入key后缀中,如:String,Integer,Long,Short,Boolean
-        ALL,        //所有参数都加入key后缀
         BEAN,       //bean的属性加入KEY后缀
-        MAP;        //Map的属性加入KEY后缀
+        MAP         //Map的属性加入KEY后缀
+    }
+
+    public enum Option{
+        ADD,    //保存
+        UP,     //更新
+        SEL,    //查询
+        DEL     //删除
     }
 
     public String key() default "";     //缓存key
     public KeyMode keyMode() default KeyMode.DEFAULT;       //key的后缀模式
+    public Option option() default  Option.SEL;             //操作类型
     public int expire() default 7200;      //缓存多少秒,默认2个小时
 
-    //http://www.tuicool.com/articles/beUVjyB
-    //http://blog.csdn.net/sunlihuo/article/details/52701519
-    //http://www.2cto.com/kf/201609/545887.html
 }

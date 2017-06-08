@@ -10,6 +10,17 @@ import java.util.regex.Pattern;
  * @date 2016年6月12日上午10:28:59 
  */
 public class ValidateUtils {
+
+	/**
+	 * 是否是数字
+	 * @param str
+	 * @return
+	 */
+	public static boolean isNumeric(String str){
+		Pattern pattern = Pattern.compile("^[0-9]+(.[0-9]+)?$");
+		return pattern.matcher(str).matches();
+	}
+
 	/** 
      * 手机号验证 
      *  
