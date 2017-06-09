@@ -19,6 +19,9 @@
     <!-- 配置注解的处理器映射器和处理器适配器 -->
     <mvc:annotation-driven/>
 
+    <!--默认的静态资源处理Servlet处理静态资源-->
+    <mvc:default-servlet-handler/>
+
     <!--拦截器-->
 
     <!-- 配置视图解析器 -->
