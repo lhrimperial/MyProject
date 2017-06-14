@@ -3,7 +3,7 @@ package com.ifarm.superback;
 import com.handy.frame.shared.constant.Logical;
 import com.handy.frame.util.FastJsonUtil;
 import com.handy.frame.util.cryp.MD5Util;
-import com.ifarm.superback.domain.UserDO;
+import com.ifarm.superback.domain.po.UserDO;
 import com.ifarm.superback.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -1,6 +1,6 @@
 package com.ifarm.superback.mapper;
 
-import com.ifarm.superback.domain.ResourceDO;
+import com.ifarm.superback.domain.po.ResourceDO;
 
 /**
  * @author longhairen

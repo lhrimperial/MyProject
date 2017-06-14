@@ -1,6 +1,6 @@
 package com.ifarm.superback.mapper;
 
-import com.ifarm.superback.domain.RoleDO;
+import com.ifarm.superback.domain.po.RoleDO;
 import org.springframework.stereotype.Repository;
 
 /**

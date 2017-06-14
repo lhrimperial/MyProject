@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ifarm.superback.mapper.RoleResourceMapper" >
     <!--The file was generated on 2017-06-09 15:10:25 by Administrator-->
-    <resultMap id="BaseResultMap" type="com.ifarm.superback.domain.RoleResourceDO" >
+    <resultMap id="BaseResultMap" type="com.ifarm.superback.domain.po.RoleResourceDO" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="role_code" property="roleCode" jdbcType="VARCHAR" />
         <result column="res_code" property="resCode" jdbcType="VARCHAR" />
@@ -25,7 +25,7 @@
         WHERE t.role_code = #{roleCode,jdbcType=VARCHAR}
     </select>
 
-    <insert id="insert" parameterType="com.ifarm.superback.domain.RoleResourceDO" >
+    <insert id="insert" parameterType="com.ifarm.superback.domain.po.RoleResourceDO" >
         insert into t_super_role_resource (id, role_code, res_code,
         version_no, is_deleted, create_user,
         create_time, modify_user, modify_time
@@ -36,7 +36,7 @@
         )
     </insert>
 
-    <update id="update" parameterType="com.ifarm.superback.domain.RoleResourceDO" >
+    <update id="update" parameterType="com.ifarm.superback.domain.po.RoleResourceDO" >
         update t_super_role_resource
         <set >
             <if test="roleCode != null" >

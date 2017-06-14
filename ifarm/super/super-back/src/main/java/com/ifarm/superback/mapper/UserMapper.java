@@ -1,6 +1,6 @@
 package com.ifarm.superback.mapper;
 
-import com.ifarm.superback.domain.UserDO;
+import com.ifarm.superback.domain.po.UserDO;
 import org.springframework.stereotype.Repository;
 
 /**

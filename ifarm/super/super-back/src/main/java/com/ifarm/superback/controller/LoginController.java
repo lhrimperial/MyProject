@@ -6,14 +6,13 @@ import com.handy.frame.server.web.security.exception.UserNotLoginException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.io.Serializable;
 
 /**
  * @author longhairen
  * @create 2017/6/9 0009 上午 10:02
  */
 @Controller
-public class LoginController implements Serializable{
+public class LoginController extends AbstractController{
 
     @SecurityNonCheckRequired
     @CookieNonCheckRequired
