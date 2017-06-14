@@ -16,6 +16,10 @@
     <!-- 使用组件扫描 Controller -->
     <context:component-scan base-package="com.handy.**.controller"/>
 
+    <import resource="classpath*:spring-hessian.xml"/>
+    <import resource="classpath*:spring-rmi.xml"/>
+    <import resource="classpath*:spring-httpinvoker.xml"/>
+
     <!-- 配置注解的处理器映射器和处理器适配器 -->
     <mvc:annotation-driven/>
 
@@ -41,8 +45,7 @@
         </property>
     </bean>
 
-    <bean
-            class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
         <property name="messageConverters">
             <list>
                 <ref bean="stringConverter"/>

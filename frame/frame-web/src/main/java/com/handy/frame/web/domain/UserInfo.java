@@ -7,6 +7,8 @@ import java.io.Serializable;
  * Created by longhairen on 2017/4/25 0025.
  */
 public class UserInfo implements Serializable {
+    private static final long serialVersionUID = -1969830418691099811L;
+
     private int id;
     private String userName;
     private String passWord;

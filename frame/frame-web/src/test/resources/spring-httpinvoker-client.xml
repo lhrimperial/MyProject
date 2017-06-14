@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id = "httpService"
+      class = "org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean" >
+        <property name = "serviceUrl" >
+            <value > http://192.168.2.159:8088/frame-web/httpService</value >
+        </property >
+        <property name = "serviceInterface"
+          value = "com.handy.frame.web.service.IHttpInvokerService" >
+        </property >
+    </bean >
+</beans>
