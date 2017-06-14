@@ -12,7 +12,11 @@
     <name>super-web Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <dependencies>
-
+        <dependency>
+            <groupId>com.ifarm.super</groupId>
+            <artifactId>super-base</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

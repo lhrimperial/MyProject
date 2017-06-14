@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.ifarm.superback.mapper.DepartmentMapper" >
+<mapper namespace="com.ifarm.superbase.mapper.DepartmentMapper" >
     <!--The file was generated on 2017-06-14 09:47:04 by Administrator-->
-    <resultMap id="BaseResultMap" type="com.ifarm.superback.domain.po.DepartmentDO" >
+    <resultMap id="BaseResultMap" type="com.ifarm.superbase.domain.po.DepartmentDO" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="dept_code" property="deptCode" jdbcType="VARCHAR" />
         <result column="dept_name" property="deptName" jdbcType="VARCHAR" />
@@ -27,7 +27,7 @@
         WHERE t.dept_code = #{deptCode,jdbcType=VARCHAR}
     </select>
 
-    <insert id="insert" parameterType="com.ifarm.superback.domain.po.DepartmentDO" >
+    <insert id="insert" parameterType="com.ifarm.superbase.domain.po.DepartmentDO" >
         insert into t_base_department (id, dept_code, dept_name,
         parent_code, parent_name, version_no,
         is_delete, create_user, create_time,
@@ -38,7 +38,7 @@
         #{modifyUser,jdbcType=VARCHAR}, #{modifyTime,jdbcType=TIMESTAMP})
     </insert>
 
-    <update id="update" parameterType="com.ifarm.superback.domain.po.DepartmentDO" >
+    <update id="update" parameterType="com.ifarm.superbase.domain.po.DepartmentDO" >
         update t_base_department
         <set >
             <if test="deptCode != null" >

@@ -1,4 +1,4 @@
-package com.ifarm.superback.domain.po;
+package com.ifarm.superbase.domain.po;
 
 import java.util.Date;
 

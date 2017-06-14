@@ -1,4 +1,4 @@
-package com.ifarm.superback.mapper;
+package com.ifarm.superbase.mapper;
 
 import com.ifarm.superback.domain.po.TermsValueDO;
 import org.apache.ibatis.annotations.Param;
@@ -26,7 +26,7 @@ public interface TermsValueMapper {
      * @param valueCode
      * @return
      */
-    TermsValueDO findTermsValueByCode(@Param("termsCode") String termsCode, @Param("valueCode")String valueCode);
+    TermsValueDO findTermsValueByCode(@Param("termsCode") String termsCode, @Param("valueCode") String valueCode);
 
     /**
      *

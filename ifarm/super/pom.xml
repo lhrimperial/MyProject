@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>super-back</module>
+        <module>super-base</module>
     </modules>
 
 

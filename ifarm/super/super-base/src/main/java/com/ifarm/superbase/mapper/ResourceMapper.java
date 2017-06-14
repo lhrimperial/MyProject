@@ -1,11 +1,13 @@
-package com.ifarm.superback.mapper;
+package com.ifarm.superbase.mapper;
 
-import com.ifarm.superback.domain.po.ResourceDO;
+
+import com.ifarm.superbase.domain.po.ResourceDO;
 
 /**
  * @author longhairen
  * @create 2017/6/9 0009 下午 5:17
  */
+
 public interface ResourceMapper {
 
     /**

@@ -1,7 +1,7 @@
-package com.ifarm.superback.mapper;
+package com.ifarm.superbase.mapper;
 
-import com.ifarm.superback.domain.po.DepartmentDO;
-import org.springframework.stereotype.Repository;
+
+import com.ifarm.superbase.domain.po.DepartmentDO;
 
 /**
  * @author longhairen
