@@ -21,5 +21,7 @@ public interface IUserInfoService {
 
     public List<UserInfo> findUserInfoList(UserInfo param);
 
+    public List<UserInfo> findUserInfoList();
+
     public void deleteUserInfo(UserInfo parem);
 }

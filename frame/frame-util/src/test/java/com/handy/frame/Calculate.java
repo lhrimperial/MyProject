@@ -11,7 +11,7 @@ public class Calculate {
 
     public static void main(String[] args) {
 //        calculateIncome();
-//        saiche(50, 8);
+        saiche(50, 8);
         makeM();
         System.out.println(TimeUtils.daysBetween("2017-03-06","2017-06-13"));
     }

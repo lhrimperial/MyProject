@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +22,18 @@ public class UserInfoServiceImpl implements IUserInfoService {
 
     @Autowired
     private UserInfoMapper userInfoMapper;
+
+    @Override
+    public List<UserInfo> findUserInfoList() {
+        UserInfo info = new UserInfo();
+
+        List<UserInfo> infos = new ArrayList<>();
+        for(int i = 0; i < 30; i++){
+            info.setId(i+1);
+            infos.add(userInfoMapper.findUserInfo(info));
+        }
+        return infos;
+    }
 
     @Override
     @Transactional

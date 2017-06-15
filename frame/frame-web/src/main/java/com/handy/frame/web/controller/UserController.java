@@ -18,7 +18,7 @@ import java.util.List;
  * @create 2017/5/8 0008 上午 10:46
  */
 @Controller
-@RequestMapping("user")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -31,6 +31,12 @@ public class UserController {
     @RequestMapping("/getNumber")
     public int getNumber(){
         return userInfoTestService.getNumber("hello","world");
+    }
+
+    @ResponseBody
+    @RequestMapping("/list")
+    public List<UserInfo> findList(){
+        return userInfoService.findUserInfoList();
     }
 
     @ResponseBody
