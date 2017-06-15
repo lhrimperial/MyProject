@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>super</module>
         <module>weixin</module>
+        <module>back</module>
     </modules>
 </project>
