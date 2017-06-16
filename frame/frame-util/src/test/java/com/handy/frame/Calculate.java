@@ -10,10 +10,43 @@ import com.handy.frame.util.date.TimeUtils;
 public class Calculate {
 
     public static void main(String[] args) {
-//        calculateIncome();
+        calculateIncome();
         saiche(50, 8);
+
+        System.out.println("");
+
+        calCount(1000, 2);
         makeM();
         System.out.println(TimeUtils.daysBetween("2017-03-06","2017-06-13"));
+    }
+
+    public static void calCount(double sum, int time){
+        double count = 0;
+        int income = 0;
+        switch (time) {
+            case 1:
+                income = 35;
+                break;
+            case 2:
+                income = 20;
+                break;
+            case 3:
+                income = 60;
+                break;
+            case 4:
+                income = 180;
+                break;
+            case 5:
+                income = 540;
+                break;
+            case 6:
+                income = 1620;
+                break;
+            default:
+                income = 35;
+        }
+        count = Math.ceil(sum/income);
+        System.out.println("sum: " + sum + "  第 " + time + " 次中总共需要 " + count + " 次");
     }
 
     public static void makeM(){
@@ -53,5 +86,7 @@ public class Calculate {
                 +9533
                 +12102.5
         );
+
+        System.out.println(7200+2000+654+2684+1400+5000+70000);
     }
 }
