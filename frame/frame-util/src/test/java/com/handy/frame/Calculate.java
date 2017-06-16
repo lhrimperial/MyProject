@@ -11,13 +11,13 @@ public class Calculate {
 
     public static void main(String[] args) {
         calculateIncome();
-        saiche(50, 8);
+        saiche(10, 8);
 
         System.out.println("");
 
-        calCount(1000, 2);
+//        calCount(1000, 2);
         makeM();
-        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-06-13"));
+//        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-06-13"));
     }
 
     public static void calCount(double sum, int time){
