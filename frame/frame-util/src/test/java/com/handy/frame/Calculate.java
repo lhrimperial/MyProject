@@ -10,10 +10,9 @@ import com.handy.frame.util.date.TimeUtils;
 public class Calculate {
 
     public static void main(String[] args) {
-        calculateIncome();
-        saiche(10, 8);
+//        calculateIncome();
+        saiche(100, 8);
 
-        System.out.println("");
 
 //        calCount(1000, 2);
         makeM();
@@ -52,7 +51,7 @@ public class Calculate {
     public static void makeM(){
         int days = TimeUtils.daysBetween("2017-06-15", "2017-12-31");
         System.out.println(days);
-        int income = days * 1000;
+        int income = days * 4000;
         System.out.println(income);
     }
 
