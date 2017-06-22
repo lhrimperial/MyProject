@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ifarm.back.base.mapper.ResourceMapper" >
     <!--The file was generated on 2017-06-09 15:09:33 by Administrator-->
-    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.ResourceDO" >
+    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.ResourcePO" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="res_code" property="resCode" jdbcType="VARCHAR" />
         <result column="res_name" property="resName" jdbcType="VARCHAR" />
@@ -30,7 +30,7 @@
         create_user, create_time, modify_user, modify_time
     </sql>
 
-    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.ResourceDO" >
+    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.ResourcePO" >
         insert into t_super_resource (id, res_code, res_name,
         entry_url, res_level, parent_res,
         res_type, display_order, checked,
@@ -47,7 +47,7 @@
         #{modifyUser,jdbcType=VARCHAR}, #{modifyTime,jdbcType=TIMESTAMP})
     </insert>
 
-    <update id="update" parameterType="com.ifarm.back.base.domain.po.ResourceDO" >
+    <update id="update" parameterType="com.ifarm.back.base.domain.po.ResourcePO" >
         update t_super_resource
         <set >
             <if test="resCode != null" >

@@ -2,7 +2,7 @@ package com.ifarm.back.base.service.impl;
 
 import com.handy.frame.util.ReflectionUtils;
 import com.ifarm.back.base.domain.bo.UserBO;
-import com.ifarm.back.base.domain.po.UserDO;
+import com.ifarm.back.base.domain.po.UserPO;
 import com.ifarm.back.base.mapper.UserMapper;
 import com.ifarm.back.base.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class UserService implements IUserService {
 
     @Override
     public UserBO findUserByCode(String userCode) {
-        UserDO userDO = userMapper.findUserByUserCode(userCode);
+        UserPO userDO = userMapper.findUserByUserCode(userCode);
         UserBO userBO = new UserBO();
         ReflectionUtils.copyProperties(userDO, userBO);
         return userBO;

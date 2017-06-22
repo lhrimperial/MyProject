@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ifarm.back.base.mapper.TermsValueMapper" >
     <!--The file was generated on 2017-06-14 09:46:37 by Administrator-->
-    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.TermsValueDO" >
+    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.TermsValuePO" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="value_code" property="valueCode" jdbcType="VARCHAR" />
         <result column="value_name" property="valueName" jdbcType="VARCHAR" />
@@ -36,7 +36,7 @@
         AND  t.value_code = #{valueCode,jdbcType=VARCHAR}
     </select>
 
-    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.TermsValueDO" >
+    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.TermsValuePO" >
         insert into t_base_data_termsvalue (id, value_code, value_name,
         terms_code, value_seq, notes,
         version_no, is_delete, create_user,
@@ -49,7 +49,7 @@
         )
     </insert>
 
-    <update id="update" parameterType="com.ifarm.back.base.domain.po.TermsValueDO" >
+    <update id="update" parameterType="com.ifarm.back.base.domain.po.TermsValuePO" >
         update t_base_data_termsvalue
         <set >
             <if test="valueCode != null" >

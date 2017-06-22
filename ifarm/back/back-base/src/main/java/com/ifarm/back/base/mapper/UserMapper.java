@@ -1,6 +1,6 @@
 package com.ifarm.back.base.mapper;
 
-import com.ifarm.back.base.domain.po.UserDO;
+import com.ifarm.back.base.domain.po.UserPO;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,17 +16,17 @@ public interface UserMapper {
      * @param userCode
      * @return
      */
-    UserDO findUserByUserCode(String userCode);
+    UserPO findUserByUserCode(String userCode);
 
     /**
      * 保存用户信息
-     * @param userDO
+     * @param userPO
      */
-    void insert(UserDO userDO);
+    void insert(UserPO userPO);
 
     /**
      * 更新用户信息
-     * @param userDO
+     * @param userPO
      */
-    void update(UserDO userDO);
+    void update(UserPO userPO);
 }

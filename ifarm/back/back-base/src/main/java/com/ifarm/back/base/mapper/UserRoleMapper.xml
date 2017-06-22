@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ifarm.back.base.mapper.UserRoleMapper" >
     <!--The file was generated on 2017-06-09 15:10:01 by Administrator-->
-    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.UserRoleDO" >
+    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.UserRolePO" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="user_code" property="userCode" jdbcType="VARCHAR" />
         <result column="org_code" property="orgCode" jdbcType="VARCHAR" />
@@ -26,7 +26,7 @@
         WHERE t.user_code = #{userCode,jdbcType=VARCHAR}
     </select>
 
-    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.UserRoleDO" >
+    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.UserRolePO" >
         insert into t_super_user_role (id, user_code, org_code,
         role_code, version_no, is_deleted,
         create_user, create_time, modify_user,
@@ -37,7 +37,7 @@
         #{modifyTime,jdbcType=TIMESTAMP})
     </insert>
 
-    <update id="update" parameterType="com.ifarm.back.base.domain.po.UserRoleDO" >
+    <update id="update" parameterType="com.ifarm.back.base.domain.po.UserRolePO" >
         update t_super_user_role
         <set >
             <if test="userCode != null" >

@@ -1,6 +1,6 @@
 package com.ifarm.back.base.mapper;
 
-import com.ifarm.back.base.domain.po.RoleDO;
+import com.ifarm.back.base.domain.po.RolePO;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -15,17 +15,17 @@ public interface RoleMapper {
      * @param roleCode
      * @return
      */
-    RoleDO findRoleByRoleCode(String roleCode);
+    RolePO findRoleByRoleCode(String roleCode);
 
     /**
      *
-     * @param roleDO
+     * @param rolePO
      */
-    void insert(RoleDO roleDO);
+    void insert(RolePO rolePO);
 
     /**
      *
-     * @param roleDO
+     * @param rolePO
      */
-    void update(RoleDO roleDO);
+    void update(RolePO rolePO);
 }

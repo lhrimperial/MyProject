@@ -1,6 +1,6 @@
 package com.ifarm.back.base.mapper;
 
-import com.ifarm.back.base.domain.po.TermsCodeDO;
+import com.ifarm.back.base.domain.po.TermsCodePO;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,17 +16,17 @@ public interface TermsCodeMapper {
      * @param termsCode
      * @return
      */
-    TermsCodeDO findTermsCodeByCode(String termsCode);
+    TermsCodePO findTermsCodeByCode(String termsCode);
 
     /**
      *
-     * @param termsCodeDO
+     * @param termsCodePO
      */
-    void update(TermsCodeDO termsCodeDO);
+    void update(TermsCodePO termsCodePO);
 
     /**
      *
-     * @param termsCodeDO
+     * @param termsCodePO
      */
-    void insert(TermsCodeDO termsCodeDO);
+    void insert(TermsCodePO termsCodePO);
 }

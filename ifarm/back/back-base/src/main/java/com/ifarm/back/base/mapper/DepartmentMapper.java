@@ -1,7 +1,7 @@
 package com.ifarm.back.base.mapper;
 
 
-import com.ifarm.back.base.domain.po.DepartmentDO;
+import com.ifarm.back.base.domain.po.DepartmentPO;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,16 +16,16 @@ public interface DepartmentMapper {
      * @param deptCode
      * @return
      */
-    DepartmentDO findDeptByCode(String deptCode);
+    DepartmentPO findDeptByCode(String deptCode);
     /**
      *
-     * @param departmentDO
+     * @param departmentPO
      */
-    void update(DepartmentDO departmentDO);
+    void update(DepartmentPO departmentPO);
 
     /**
      *
-     * @param departmentDO
+     * @param departmentPO
      */
-    void insert(DepartmentDO departmentDO);
+    void insert(DepartmentPO departmentPO);
 }
