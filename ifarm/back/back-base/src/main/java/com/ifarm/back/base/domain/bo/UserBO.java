@@ -1,6 +1,5 @@
 package com.ifarm.back.base.domain.bo;
 
-import com.handy.frame.shared.entity.BaseEntity;
 import com.handy.frame.shared.entity.IUser;
 
 import java.util.Date;
@@ -10,7 +9,7 @@ import java.util.Set;
  * @author longhairen
  * @create 2017/6/15 0015 上午 9:46
  */
-public class UserBO extends BaseEntity implements IUser{
+public class UserBO implements IUser{
 
     private String userCode;
     private String password;
