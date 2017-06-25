@@ -15,7 +15,7 @@ public class Calculate {
 //
 //        System.out.println("");
 //        calculateIncome();
-        saiche(100, 8);
+//        saiche(100, 8);
 
 
 //        calCount(1000, 2);
@@ -93,5 +93,11 @@ public class Calculate {
         System.out.println("totalCast:"+totalCast);
         System.out.println("cast sum:"+(totalCast+lost));
         System.out.println("Remainder:"+(income-totalCast-lost));
+
+        int chongzhi = 400+300+3000+5000+15000+15000+8000+15000+4300+4500+50000;
+        int tixian = 370+1279+3012;
+        System.out.println("saichechongzhi:"+chongzhi);
+        System.out.println("tixian:"+tixian);
+        System.out.println(chongzhi-tixian);
     }
 }
