@@ -1,7 +1,7 @@
 package com.ifarm.back.base.mapper;
 
 
-import com.ifarm.back.base.domain.po.EmployeeDO;
+import com.ifarm.back.base.domain.po.EmployeePO;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -16,17 +16,17 @@ public interface EmployeeMapper {
      * @param empCode
      * @return
      */
-    EmployeeDO findEmpByCode(String empCode);
+    EmployeePO findEmpByCode(String empCode);
 
     /**
      *
-     * @param employeeDO
+     * @param employeePO
      */
-    void update(EmployeeDO employeeDO);
+    void update(EmployeePO employeePO);
 
     /**
      *
-     * @param employeeDO
+     * @param employeePO
      */
-    void insert(EmployeeDO employeeDO);
+    void insert(EmployeePO employeePO);
 }

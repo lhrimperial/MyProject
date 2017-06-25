@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ifarm.back.base.mapper.EmployeeMapper" >
     <!--The file was generated on 2017-06-14 09:47:25 by Administrator-->
-    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.EmployeeDO" >
+    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.EmployeePO" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="emp_code" property="empCode" jdbcType="VARCHAR" />
         <result column="emp_name" property="empName" jdbcType="VARCHAR" />
@@ -31,7 +31,7 @@
         WHERE t.emp_code = #{empCode,jdbcType=VARCHAR}
     </select>
 
-    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.EmployeeDO" >
+    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.EmployeePO" >
         insert into t_base_employee (id, emp_code, emp_name,
         dept_code, dept_name, gender,
         mobile_no, email, tel_phone,
@@ -46,7 +46,7 @@
         )
     </insert>
 
-    <update id="update" parameterType="com.ifarm.back.base.domain.po.EmployeeDO" >
+    <update id="update" parameterType="com.ifarm.back.base.domain.po.EmployeePO" >
         update t_base_employee
         <set >
             <if test="empCode != null" >

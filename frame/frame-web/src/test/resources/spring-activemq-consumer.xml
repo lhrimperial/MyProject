@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 配置ActiveMQ的JMS连接工厂 -->
+    <bean id="connectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+        <property name="brokerURL" value="tcp://192.168.157.128:61616" />
+        <!--是否异常分派消息（如果消费时间很长，采用异步分派就提高性能）-->
+        <property name="dispatchAsync" value="false" />
+    </bean>
+    <!-- 发送消息的目的地（一个队列） -->
+    <bean id="destination" class="org.apache.activemq.command.ActiveMQQueue">
+        <!-- 设置消息队列的名字 -->
+        <constructor-arg index="0" value="queue_test" />
+    </bean>
+
+    <!-- 配置JMS模版 -->
+    <bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="defaultDestination" ref="destination" />
+        <property name="receiveTimeout" value="0" />
+    </bean>
+
+    <bean id="objectMessageListener" class="com.handy.frame.web.activemq.ObjectMessageListener"/>
+
+    <bean id="objectListenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer" lazy-init="false">
+        <property name="connectionFactory" ref="connectionFactory" />
+        <property name="destination" ref="destination" />
+        <property name="messageListener" ref="objectMessageListener" />
+
+        <property name="sessionTransacted" value="true"/>
+        <!-- 不接收同一连接的消息(如果是本地测试，需要设置为false) -->
+        <property name="pubSubNoLocal" value="false"/>
+
+        <!-- 应该只是在Destination为Queue的时候才使用多个MessageConsumer -->
+        <property name="concurrentConsumers" value="5"/>
+        <property name="maxConcurrentConsumers" value="50" />
+        <property name="idleTaskExecutionLimit" value="2" />
+        <property name="receiveTimeout" value="10000" />
+
+        <!-- 0:CACHE_NONE,1:CACHE_CONNECTION,2:CACHE_SESSION,3:CACHE_CONSUMER,4:CACHE_AUTO -->
+        <property name="cacheLevel" value="0"/>
+    </bean>
+
+
+</beans>

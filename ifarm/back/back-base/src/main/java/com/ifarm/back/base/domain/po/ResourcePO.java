@@ -2,7 +2,7 @@ package com.ifarm.back.base.domain.po;
 
 import java.util.Date;
 
-public class ResourceDO {
+public class ResourcePO {
     /**
      t_super_resource*id
      *

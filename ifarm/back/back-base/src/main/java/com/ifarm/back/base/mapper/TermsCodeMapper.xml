@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ifarm.back.base.mapper.TermsCodeMapper" >
     <!--The file was generated on 2017-06-14 09:46:06 by Administrator-->
-    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.TermsCodeDO" >
+    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.TermsCodePO" >
         <id column="id" property="id" jdbcType="INTEGER" />
         <result column="terms_code" property="termsCode" jdbcType="VARCHAR" />
         <result column="terms_name" property="termsName" jdbcType="VARCHAR" />
@@ -26,7 +26,7 @@
         WHERE t.terms_code = #{termsCode,jdbcType=VARCHAR}
     </select>
 
-    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.TermsCodeDO" >
+    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.TermsCodePO" >
         insert into t_base_data_termscode (id, terms_code, terms_name,
         notes, version_no, is_delete,
         create_user, create_time, modify_user,
@@ -37,7 +37,7 @@
         #{modifyTime,jdbcType=TIMESTAMP})
     </insert>
 
-    <update id="update" parameterType="com.ifarm.back.base.domain.po.TermsCodeDO" >
+    <update id="update" parameterType="com.ifarm.back.base.domain.po.TermsCodePO" >
         update t_base_data_termscode
         <set >
             <if test="termsCode != null" >

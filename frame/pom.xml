@@ -66,15 +66,21 @@
         <dom4j-version>1.6.1</dom4j-version>
 
         <aspectj-version>1.8.10</aspectj-version>
-
+        <!--MQ-->
         <kafka-clients-version>0.10.1.0</kafka-clients-version>
         <kafka_2.10-version>0.8.0</kafka_2.10-version>
+        <activemq-version>5.1.0</activemq-version>
 
         <hessian-version>4.0.38</hessian-version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.hoau.activemq</groupId>
+                <artifactId>activemq</artifactId>
+                <version>${activemq-version}</version>
+            </dependency>
             <dependency>
                 <groupId>com.caucho</groupId>
                 <artifactId>hessian</artifactId>
@@ -89,6 +95,12 @@
                 <groupId>org.apache.kafka</groupId>
                 <artifactId>kafka_2.10</artifactId>
                 <version>${kafka_2.10-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-simple</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
             <dependency>

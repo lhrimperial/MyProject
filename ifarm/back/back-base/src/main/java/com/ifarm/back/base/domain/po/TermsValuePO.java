@@ -2,7 +2,7 @@ package com.ifarm.back.base.domain.po;
 
 import java.util.Date;
 
-public class TermsValueDO {
+public class TermsValuePO {
     /**
      t_base_data_termsvalue*id
      *

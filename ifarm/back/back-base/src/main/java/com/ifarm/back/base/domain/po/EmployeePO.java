@@ -2,7 +2,7 @@ package com.ifarm.back.base.domain.po;
 
 import java.util.Date;
 
-public class EmployeeDO {
+public class EmployeePO {
     /**
      t_base_employee*id
      *

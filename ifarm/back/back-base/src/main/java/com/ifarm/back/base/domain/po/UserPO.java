@@ -2,7 +2,7 @@ package com.ifarm.back.base.domain.po;
 
 import java.util.Date;
 
-public class UserDO {
+public class UserPO {
     /**
      t_super_user*id
      *

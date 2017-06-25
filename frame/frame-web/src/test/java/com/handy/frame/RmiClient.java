@@ -16,7 +16,6 @@ import java.rmi.Naming;
  * @author longhairen
  * @create 2017/6/14 0014 下午 3:48
  */
-@Component
 @ContextConfiguration("classpath:*spring-rmiclient.xml")
 public class RmiClient extends AbstractJUnit4SpringContextTests{
 

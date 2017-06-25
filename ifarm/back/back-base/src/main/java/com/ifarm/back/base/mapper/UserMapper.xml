@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ifarm.back.base.mapper.UserMapper">
     <!--The file was generated on 2017-06-09 15:08:41 by Administrator-->
-    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.UserDO">
+    <resultMap id="BaseResultMap" type="com.ifarm.back.base.domain.po.UserPO">
         <id column="id" property="id" jdbcType="INTEGER"/>
         <result column="user_code" property="userCode" jdbcType="VARCHAR"/>
         <result column="pass_word" property="passWord" jdbcType="VARCHAR"/>
@@ -31,7 +31,7 @@
         WHERE t.user_code = #{userCode,jdbcType=VARCHAR}
     </select>
 
-    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.UserDO">
+    <insert id="insert" parameterType="com.ifarm.back.base.domain.po.UserPO">
         insert into t_super_user (id, user_code, pass_word,
         emp_code, emp_name, org_code,
         is_emp, last_login, notes,
@@ -46,7 +46,7 @@
         )
     </insert>
 
-    <update id="update" parameterType="com.ifarm.back.base.domain.po.UserDO" >
+    <update id="update" parameterType="com.ifarm.back.base.domain.po.UserPO" >
         update t_super_user
         <set >
             <if test="userCode != null" >

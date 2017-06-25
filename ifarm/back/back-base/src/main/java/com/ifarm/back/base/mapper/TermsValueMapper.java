@@ -1,6 +1,6 @@
 package com.ifarm.back.base.mapper;
 
-import com.ifarm.back.base.domain.po.TermsValueDO;
+import com.ifarm.back.base.domain.po.TermsValuePO;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
@@ -18,7 +18,7 @@ public interface TermsValueMapper {
      * @param termsCode
      * @return
      */
-    List<TermsValueDO> findTermsValues(String termsCode);
+    List<TermsValuePO> findTermsValues(String termsCode);
 
     /**
      *
@@ -26,16 +26,16 @@ public interface TermsValueMapper {
      * @param valueCode
      * @return
      */
-    TermsValueDO findTermsValueByCode(@Param("termsCode") String termsCode, @Param("valueCode") String valueCode);
+    TermsValuePO findTermsValueByCode(@Param("termsCode") String termsCode, @Param("valueCode") String valueCode);
 
     /**
      *
-     * @param termsValueDO
+     * @param termsValuePO
      */
-    void update(TermsValueDO termsValueDO);
+    void update(TermsValuePO termsValuePO);
     /**
      *
-     * @param termsValueDO
+     * @param termsValuePO
      */
-    void insert(TermsValueDO termsValueDO);
+    void insert(TermsValuePO termsValuePO);
 }

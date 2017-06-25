@@ -1,10 +1,8 @@
 package com.ifarm.back.base.mapper;
 
 
-import com.ifarm.back.base.domain.po.ResourceDO;
+import com.ifarm.back.base.domain.po.ResourcePO;
 import org.springframework.stereotype.Repository;
-
-import javax.annotation.Resource;
 
 /**
  * @author longhairen
@@ -18,17 +16,17 @@ public interface ResourceMapper {
      * @param resCode
      * @return
      */
-    ResourceDO findResourceByResCode(String resCode);
+    ResourcePO findResourceByResCode(String resCode);
 
     /**
      *
-     * @param resourceDO
+     * @param resourcePO
      */
-    void insert(ResourceDO resourceDO);
+    void insert(ResourcePO resourcePO);
 
     /**
      *
-     * @param resourceDO
+     * @param resourcePO
      */
-    void update(ResourceDO resourceDO);
+    void update(ResourcePO resourcePO);
 }

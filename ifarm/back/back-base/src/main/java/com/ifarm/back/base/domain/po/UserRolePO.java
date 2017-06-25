@@ -2,7 +2,7 @@ package com.ifarm.back.base.domain.po;
 
 import java.util.Date;
 
-public class UserRoleDO {
+public class UserRolePO {
     /**
      t_super_user_role*id
      *
