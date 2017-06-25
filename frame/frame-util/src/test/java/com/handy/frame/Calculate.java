@@ -11,12 +11,15 @@ public class Calculate {
 
     public static void main(String[] args) {
         calculateIncome();
-        saiche(10, 8);
+//        saiche(10, 8);
+//
+//        System.out.println("");
+//        calculateIncome();
+        saiche(100, 8);
 
-        System.out.println("");
 
 //        calCount(1000, 2);
-        makeM();
+//        makeM();
 //        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-06-13"));
     }
 
@@ -52,7 +55,7 @@ public class Calculate {
     public static void makeM(){
         int days = TimeUtils.daysBetween("2017-06-15", "2017-12-31");
         System.out.println(days);
-        int income = days * 1000;
+        int income = days * 4000;
         System.out.println(income);
     }
 
@@ -76,17 +79,19 @@ public class Calculate {
      *
      */
     public static void calculateIncome(){
-        System.out.println(
-                7000
-                +12488
-                +11206
-                +13593.53
-                +13593.53
-                +13590
-                +9533
-                +12102.5
-        );
+        double salary = 7000+12488+11206+ 13593.53+13593.53+13590+9533+12102.5;
+        double income = salary + 55000;
 
-        System.out.println(7200+2000+654+2684+1400+5000+70000);
+        System.out.println("salary:"+salary);
+        System.out.println("income:"+income);
+
+        double other = 1420+609+669+850+2684+654+10000+6800;
+        System.out.println("other:"+other);
+        double totalCast = 7200+7000+other;
+        double lost = 65936+50000;
+        System.out.println("lost:"+lost);
+        System.out.println("totalCast:"+totalCast);
+        System.out.println("cast sum:"+(totalCast+lost));
+        System.out.println("Remainder:"+(income-totalCast-lost));
     }
 }
