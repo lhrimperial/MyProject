@@ -82,7 +82,7 @@ public class Calculate {
 
         double other = 1420+609+669+850+2684+654+10000+6800;
         System.out.println("other:"+other);
-        double totalCast = 7200+7000+other;
+        double totalCast = 3699+7200+7000+other;
         double lost = 65936+50000;
         System.out.println("lost:"+lost);
         System.out.println("totalCast:"+totalCast);
