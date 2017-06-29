@@ -18,6 +18,36 @@ public class Calculate {
 //        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-06-13"));
     }
 
+    public static void fundMoney(){
+
+    }
+
+    /**
+     *
+     */
+    public static void calculateIncome(){
+        double salary = 7000+12488+11206+ 13593.53+13593.53+13590+9533+12102.5;
+        double income = salary + 55000;
+
+        System.out.println("salary:"+salary);
+        System.out.println("income:"+income);
+
+        double other = 1420+609+669+850+2684+654+10000+6800;
+        System.out.println("other:"+other);
+        double totalCast = 3699+7200+7000+other;
+        double lost = 65936+50000;
+        System.out.println("lost:"+lost);
+        System.out.println("totalCast:"+totalCast);
+        System.out.println("cast sum:"+(totalCast+lost));
+        System.out.println("Remainder:"+(income-totalCast-lost));
+
+        int chongzhi = 400+300+3000+5000+15000+15000+8000+15000+4300+4500+50000;
+        int tixian = 370+1279+3012;
+        System.out.println("saichechongzhi:"+chongzhi);
+        System.out.println("tixian:"+tixian);
+        System.out.println(chongzhi-tixian);
+    }
+
     public static void calCount(double sum, int time){
         double count = 0;
         int income = 0;
@@ -70,29 +100,5 @@ public class Calculate {
         }
     }
 
-    /**
-     *
-     */
-    public static void calculateIncome(){
-        double salary = 7000+12488+11206+ 13593.53+13593.53+13590+9533+12102.5;
-        double income = salary + 55000;
 
-        System.out.println("salary:"+salary);
-        System.out.println("income:"+income);
-
-        double other = 1420+609+669+850+2684+654+10000+6800;
-        System.out.println("other:"+other);
-        double totalCast = 3699+7200+7000+other;
-        double lost = 65936+50000;
-        System.out.println("lost:"+lost);
-        System.out.println("totalCast:"+totalCast);
-        System.out.println("cast sum:"+(totalCast+lost));
-        System.out.println("Remainder:"+(income-totalCast-lost));
-
-        int chongzhi = 400+300+3000+5000+15000+15000+8000+15000+4300+4500+50000;
-        int tixian = 370+1279+3012;
-        System.out.println("saichechongzhi:"+chongzhi);
-        System.out.println("tixian:"+tixian);
-        System.out.println(chongzhi-tixian);
-    }
 }

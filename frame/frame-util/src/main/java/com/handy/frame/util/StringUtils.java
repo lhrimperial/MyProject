@@ -13,7 +13,6 @@ import java.util.List;
 public class StringUtils {
 	
 	public static String formart(String url, String ... urlVariables){
-		//格式化获取运单详细数据URL
 		MessageFormat mftdu = new MessageFormat(url);
 		return mftdu.format(urlVariables);
 	}
