@@ -15,6 +15,8 @@
         <module>frame-server</module>
         <module>frame-web</module>
         <module>frame-design</module>
+        <module>frame-spring-boot</module>
+        <module>frame-mockito</module>
     </modules>
 
 
@@ -70,16 +72,24 @@
         <!--MQ-->
         <kafka-clients-version>0.10.1.0</kafka-clients-version>
         <kafka_2.10-version>0.8.0</kafka_2.10-version>
-        <activemq-version>5.1.0</activemq-version>
+        <activemq-version>5.7.0</activemq-version>
 
         <hessian-version>4.0.38</hessian-version>
+
+        <mockito-version>1.9.5</mockito-version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.hoau.activemq</groupId>
-                <artifactId>activemq</artifactId>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito-version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-all</artifactId>
                 <version>${activemq-version}</version>
             </dependency>
             <dependency>

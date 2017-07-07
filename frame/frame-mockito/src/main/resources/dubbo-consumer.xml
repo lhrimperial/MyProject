@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+               xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
+    <dubbo:application name="dubbo-consumer-application"/>
+
+    <!-- 使用multicast广播注册中心暴露发现服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="10.200.4.74:2181" check="false"/>
+
+    <!-- 监控注册 -->
+    <dubbo:monitor address="192.168.0.107:7071"/>
+
+    <dubbo:consumer check="false" lazy="true" timeout="120000"/>
+
+    <!--服务注册配置，指明提供服务的类等interface、id、version、url-->
+    <dubbo:reference id="dubboInterfaceService" interface="com.handy.frame.mockito.service.IDubboInterfaceService"/>
+
+</beans>

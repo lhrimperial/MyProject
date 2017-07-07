@@ -1,6 +1,5 @@
 package com.handy.frame.activemq;
 
-import com.handy.frame.web.activemq.ProducerService;
 import com.handy.frame.web.domain.UserInfo;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

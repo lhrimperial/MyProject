@@ -1,16 +1,13 @@
-package com.handy.frame.web.activemq.impl;
+package com.handy.frame.activemq.impl;
 
-import com.handy.frame.web.activemq.ProducerService;
+import com.handy.frame.activemq.ProducerService;
 import org.apache.activemq.command.ActiveMQQueue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
-import javax.jms.Destination;
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.Session;

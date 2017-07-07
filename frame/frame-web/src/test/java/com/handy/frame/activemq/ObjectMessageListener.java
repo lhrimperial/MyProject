@@ -1,4 +1,4 @@
-package com.handy.frame.web.activemq;
+package com.handy.frame.activemq;
 
 import com.handy.frame.util.JsonUtils;
 import com.handy.frame.web.domain.UserInfo;

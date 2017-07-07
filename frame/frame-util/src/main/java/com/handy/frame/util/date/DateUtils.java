@@ -82,7 +82,7 @@ public class DateUtils extends org.apache.commons.lang.time.DateUtils {
 	 * @param ymd
 	 * @param hm
 	 * @return
-	 * @author 高佳
+	 * @author 龙海仁
 	 * @date 2015年8月19日
 	 * @update
 	 */
@@ -109,7 +109,7 @@ public class DateUtils extends org.apache.commons.lang.time.DateUtils {
 	 * 
 	 * @param date
 	 * @return
-	 * @author 高佳
+	 * @author 龙海仁
 	 * @date 2015年8月19日
 	 * @update
 	 */
@@ -122,7 +122,7 @@ public class DateUtils extends org.apache.commons.lang.time.DateUtils {
 	 * 
 	 * @param date
 	 * @return
-	 * @author 高佳
+	 * @author 龙海仁
 	 * @date 2015年8月19日
 	 * @update
 	 */
@@ -137,7 +137,7 @@ public class DateUtils extends org.apache.commons.lang.time.DateUtils {
 	 * 
 	 * @param dateStr
 	 * @return
-	 * @author 高佳
+	 * @author 龙海仁
 	 * @date 2015年8月19日
 	 * @update
 	 */
