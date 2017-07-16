@@ -26,16 +26,24 @@ public class Calculate {
      *
      */
     public static void calculateIncome(){
-        double salary = 7000+12488+11206+ 13593.53+13593.53+13590+9533+12102.5;
+        double salary = 7000+12488+11206+
+                13593.53+13593.53+13590+2853
+                +6680+12102.5+12095;
         double income = salary + 55000;
 
         System.out.println("salary:"+salary);
         System.out.println("income:"+income);
 
-        double other = 1420+609+669+850+2684+654+10000+6800;
+        double other = 1420+609+669+850+2684+654+10000+6800+4800;
         System.out.println("other:"+other);
-        double totalCast = 3699+7200+7000+other;
-        double lost = 65936+50000;
+        double phone = 3699;
+        double fangzu = 3600+3600;
+        double jiaozha = 6000;
+        System.out.println("phone:"+phone);
+        System.out.println("fangzu:"+fangzu);
+        System.out.println("jiaozha:"+jiaozha);
+        double totalCast = phone+fangzu+jiaozha+other;
+        double lost = 65936+50000+1200;
         System.out.println("lost:"+lost);
         System.out.println("totalCast:"+totalCast);
         System.out.println("cast sum:"+(totalCast+lost));
