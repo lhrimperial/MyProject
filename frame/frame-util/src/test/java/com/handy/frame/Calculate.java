@@ -46,6 +46,22 @@ public class Calculate {
         System.out.println("saichechongzhi:"+chongzhi);
         System.out.println("tixian:"+tixian);
         System.out.println(chongzhi-tixian);
+
+        /**
+         * 充值赛车：
+         2017-03-12:400
+         2017-03-12:300
+         2017-03-15:3000
+         2017-03-16:5000
+         2017-03-19:15000
+         2017-04-15:15000
+         2017-04-16:8000
+         2017-04-20:15000
+         2017-04-30:4300
+         2017-05-01:4500
+         2017-06-14:50000
+         sum：120500
+         */
     }
 
     public static void calCount(double sum, int time){
