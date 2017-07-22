@@ -26,11 +26,11 @@ public class Calculate {
      *
      */
     public static void calculateIncome(){
-        double salary = 7000+12488+11206+
-                13593.53+13593.53+13590+2853
+        double qiaobao = 7000+12488+11206;
+        double salary = 13593.53+13593.53+13590+2853
                 +6680+12102.5+12095;
-        double income = salary + 55000;
-
+        double income = qiaobao + salary + 55000;
+        System.out.println("qiaobao:"+qiaobao);
         System.out.println("salary:"+salary);
         System.out.println("income:"+income);
 
