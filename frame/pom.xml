@@ -17,6 +17,7 @@
         <module>frame-design</module>
         <module>frame-spring-boot</module>
         <module>frame-mockito</module>
+        <module>frame-dubbo</module>
     </modules>
 
 
