@@ -14,10 +14,8 @@
         <module>frame-util</module>
         <module>frame-server</module>
         <module>frame-web</module>
-        <module>frame-design</module>
-        <module>frame-spring-boot</module>
-        <module>frame-mockito</module>
         <module>frame-dubbo</module>
+        <module>frame-algorithm</module>
     </modules>
 
 
