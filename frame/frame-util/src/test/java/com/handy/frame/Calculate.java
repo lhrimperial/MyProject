@@ -1,12 +1,13 @@
 package com.handy.frame;
 
 
-import com.handy.frame.util.date.TimeUtils;
+
+import java.text.DecimalFormat;
 
 public class Calculate {
 
     public static void main(String[] args) {
-        //fundMoney();
+        fundMoney();
        // System.out.println("************************************");
         //calculateIncome();
 //        saiche(10, 8);
@@ -18,10 +19,11 @@ public class Calculate {
 
 //        calCount(1000, 2);
 //        makeM();
-        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-09-18"));
+//        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-09-18"));
     }
 
     public static void fundMoney(){
+        DecimalFormat df = new DecimalFormat("######0.00");
         double huayu = 879.18+3626.97 +12473.22 +3626.97 +3626.97 +3626.97 +3626.97 +3626.97 +3637.64 +3637.64 +3241.90
                 +3312.70 +2091.27 +3312.70 +5988.95 +3312.70   +3312.70 +2900 +2900 +2900;
         double kaxing = 3262.97+10421.40+10359.56+10359.56+1655;
@@ -31,14 +33,14 @@ public class Calculate {
         double qb2017 = 7000+12488+11206+4644-2000;
         double xiangmu = 19700;
         double qianbao = 2480+4250+5811+3233+1297.5+4193+7000+12488+11206+4644-2000;
-        System.out.println("sum2017：" + (hw2017+qb2017+lvmama) + "  salary: " + (hw2017+lvmama) + "  qb2017:  " + qb2017);
-        System.out.println("huayu：" + huayu);
-        System.out.println("kaxing：" + kaxing);
-        System.out.println("hongwang：" + hongwang);
-        System.out.println("lvmama：" + lvmama);
-        System.out.println("xiangmu：" + xiangmu);
-        System.out.println("qianbao：" + qianbao);
-        System.out.println("total: " + (huayu+kaxing+hongwang+lvmama+xiangmu+qianbao));
+        System.out.println("sum2017：" + df.format(hw2017+qb2017+lvmama) + "  salary: " + df.format(hw2017+lvmama) + "  qb2017:  " + df.format(qb2017));
+        System.out.println("huayu：" + df.format(huayu));
+        System.out.println("kaxing：" + df.format(kaxing));
+        System.out.println("hongwang：" + df.format(hongwang));
+        System.out.println("lvmama：" + df.format(lvmama));
+        System.out.println("xiangmu：" + df.format(xiangmu));
+        System.out.println("qianbao：" + df.format(qianbao));
+        System.out.println("total: " + df.format(huayu+kaxing+hongwang+lvmama+xiangmu+qianbao));
     }
 
     /**
