@@ -1,11 +1,14 @@
 package com.handy.frame;
 
+
 import com.handy.frame.util.date.TimeUtils;
 
 public class Calculate {
 
     public static void main(String[] args) {
-        calculateIncome();
+        //fundMoney();
+       // System.out.println("************************************");
+        //calculateIncome();
 //        saiche(10, 8);
 //
 //        System.out.println("");
@@ -15,20 +18,35 @@ public class Calculate {
 
 //        calCount(1000, 2);
 //        makeM();
-//        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-06-13"));
+        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-09-18"));
     }
 
     public static void fundMoney(){
-
+        double huayu = 879.18+3626.97 +12473.22 +3626.97 +3626.97 +3626.97 +3626.97 +3626.97 +3637.64 +3637.64 +3241.90
+                +3312.70 +2091.27 +3312.70 +5988.95 +3312.70   +3312.70 +2900 +2900 +2900;
+        double kaxing = 3262.97+10421.40+10359.56+10359.56+1655;
+        double hongwang = 8257+12114.99+11914+13193+13593.53+13593.53+13593.53+13593.53+13590+2853;
+        double lvmama = 6680+12102.5+12095+12443+16227;
+        double hw2017 = 13593.53+13593.53+13593.53+13590+2853;
+        double qb2017 = 7000+12488+11206+4644-2000;
+        double xiangmu = 19700;
+        double qianbao = 2480+4250+5811+3233+1297.5+4193+7000+12488+11206+4644-2000;
+        System.out.println("sum2017：" + (hw2017+qb2017+lvmama) + "  salary: " + (hw2017+lvmama) + "  qb2017:  " + qb2017);
+        System.out.println("huayu：" + huayu);
+        System.out.println("kaxing：" + kaxing);
+        System.out.println("hongwang：" + hongwang);
+        System.out.println("lvmama：" + lvmama);
+        System.out.println("xiangmu：" + xiangmu);
+        System.out.println("qianbao：" + qianbao);
+        System.out.println("total: " + (huayu+kaxing+hongwang+lvmama+xiangmu+qianbao));
     }
 
     /**
      *
      */
     public static void calculateIncome(){
-        double qiaobao = 7000+12488+11206;
-        double salary = 13593.53+13593.53+13590+2853
-                +6680+12102.5+12095;
+        double qiaobao = 7000+12488+11206+4644-2000;
+        double salary = 13593.53+13593.53+13590+2853+6680+12102.5+12095+12443;
         double income = qiaobao + salary + 55000;
         System.out.println("qiaobao:"+qiaobao);
         System.out.println("salary:"+salary);
@@ -100,13 +118,6 @@ public class Calculate {
         }
         count = Math.ceil(sum/income);
         System.out.println("sum: " + sum + "  第 " + time + " 次中总共需要 " + count + " 次");
-    }
-
-    public static void makeM(){
-        int days = TimeUtils.daysBetween("2017-06-15", "2017-12-31");
-        System.out.println(days);
-        int income = days * 4000;
-        System.out.println(income);
     }
 
     public static void saiche(int start, int len){

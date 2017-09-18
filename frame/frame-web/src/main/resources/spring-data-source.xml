@@ -24,6 +24,17 @@
         <property name="password" value="${jdbc.slave.password}"/>
     </bean>
 
+<!--    <bean id="dataSourceSpied" class="com.handy.frame.redis.dao.datasources.aspect.DynamicRoutingDataSource">
+        <property name="targetDataSources">
+            <map key-type="com.handy.frame.redis.dao.datasources.aspect.DataSourceType">
+                <entry key="MASTER" value-ref="masterDataSource" />
+                <entry key="SLAVE" value-ref="slave01DataSource" />
+            </map>
+        </property>
+        <property name="defaultTargetDataSource" ref="masterDataSource" />
+    </bean>
+    -->
+
     <!--SQL 日志框架 master-->
     <bean id="masterDataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
         <constructor-arg ref="masterDataSourceSpied" />
