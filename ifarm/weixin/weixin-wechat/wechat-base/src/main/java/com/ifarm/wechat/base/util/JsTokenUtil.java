@@ -82,8 +82,6 @@ public class JsTokenUtil {
 	
 	/**
 	 * 获取JS ticket
-	 * @param corpid
-	 * @param secrect
 	 * @return
 	 * @author 龙海仁
 	 * @date 2015年12月15日下午10:59:25
