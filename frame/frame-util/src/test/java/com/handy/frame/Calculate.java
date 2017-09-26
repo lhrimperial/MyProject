@@ -2,12 +2,14 @@ package com.handy.frame;
 
 
 
+import com.handy.frame.util.date.TimeUtils;
+
 import java.text.DecimalFormat;
 
 public class Calculate {
 
     public static void main(String[] args) {
-        fundMoney();
+//        fundMoney();
        // System.out.println("************************************");
         //calculateIncome();
 //        saiche(10, 8);
@@ -19,7 +21,7 @@ public class Calculate {
 
 //        calCount(1000, 2);
 //        makeM();
-//        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-09-18"));
+        System.out.println(TimeUtils.daysBetween("2017-03-06","2017-09-21"));
     }
 
     public static void fundMoney(){
